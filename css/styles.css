@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
 
 *{
     font-family: 'Raleway', sans-serif;
@@ -15,7 +15,6 @@ body{
     padding: 0;
     color: #1C3144;
 }
-
 
 .header h1 {
     font-size: 3em;
@@ -190,11 +189,27 @@ a.btn_volver:hover{
     display: block;
     
 }
-
 .detalle_personaje img {
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px!important;
 }
 
+.personaje {
+    margin: 10px auto;
+    width: 95%;
+    min-height: 540px;;
+}
+
+div.forms {
+    display: block;
+}
+
+select#status, input#buscar {
+    width: 100%;    
+    margin: 10px auto;
+}
 
 }
 
