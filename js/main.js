@@ -62,9 +62,17 @@ function createCharacterHtml(character) {
                     <img src="${character.image}" alt="">
                     <h2>${character.name}</h2>
                     <h4>Status: ${character.status}</h4>
-                    <a href="singlecharacter/${character.id}" class="btn">Mas info</a>
+                    <a href="singlecharacter.html?id=${character.id}" class="btn">Mas info</a>
                 </div>`;
 }
+
+
+/* // recuperar parametros de la url
+function obtenerParam() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramId = urlParams.get('id');
+} */
+
 
 // Función para recuperar a los personajes por id
 function getSingle(pId) {
