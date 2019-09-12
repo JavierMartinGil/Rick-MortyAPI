@@ -7,17 +7,15 @@
 }
 
 body{
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/bg1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: left top;
     margin: 0;
     padding: 0;
+    color: #1C3144;
 }
 
-.contenido{
-    background-color: #2195f3b2;
-}
 
 .header h1 {
     font-size: 3em;
@@ -140,6 +138,64 @@ a.btn:hover{
 .detalle_personaje .avatar img{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+}
+
+a.btn_volver {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #2196F3;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 275px;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+a.btn_volver:hover{
+    background-color: #1C3144;
+}
+
+.episodios ul {
+    padding: 0;
+    list-style: none;
+}
+
+.episodios li {
+    font-size: .9em;
+    margin: 5px 0;
+}
+
+.episodios li:before{
+    content:'\f00c';
+    color: #2196F3;
+    font-family: 'FontAwesome';
+    padding-right: 3px;
+}
+
+.episodios a {
+    color: #1C3144;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.episodios a:hover {
+    color: #2196F3;
+}
+
+@media (max-width: 700px){
+
+.detalle_personaje {
+    display: block;
+    
+}
+
+.detalle_personaje img {
+    width: 100%;
+}
+
+
 }
 
 

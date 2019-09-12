@@ -24,7 +24,7 @@ function obtenerParam() {
 function createCharacterHtml(character) {
     let episodiosHtml = "";
     for (let episodio of character.episode) {
-        episodiosHtml += `<li><a href="${episodio}">${episodio}</li>`;
+        episodiosHtml += `<li><a href="${episodio}">Episodio número: ${episodio.substring(40, episodio.length)}</li>`;
     }
     return `<div class="in-grid detalle"><h1>${character.name}</h1></div>
             <div class="detalle_personaje">
@@ -35,9 +35,11 @@ function createCharacterHtml(character) {
                 <h2> <i class="fa fa-user"></i> ${character.name}</h2>
                 <h3><i class="fa fa-heart"></i> Status: ${character.status}</h3>
                 <h4><i class="fa fa-bug"></i> Especie: ${character.species}</h4>
+                <h4><i class="fa fa-venus-mars"></i> Género: ${character.gender}</h4>
                 <a href="index.html" class="btn_volver">Volver al inicio</a>
             </div>
             <div class="episodios">
+            <h3><i class="fa fa-list"></i> Lista de episodios</h3>
                 <ul>
                  ${episodiosHtml}
                 </ul>
