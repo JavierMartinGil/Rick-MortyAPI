@@ -2,20 +2,16 @@ const baseUrl = 'https://rickandmortyapi.com/api/character/';
 const container = document.querySelector('.container');
 let personaje = '';
 let detalle_personaje = '';
-let episodios = '';
 
 
-// recuperar parametros de la url
+// recuperar parametros de la url y pinta el personaje
 function obtenerParam() {
     const urlParams = new URLSearchParams(window.location.search);
     const paramId = urlParams.get('id');
     fetch(`${baseUrl}${paramId}`)
         .then(response => response.json())
         .then(personaje => {
-            console.log(personaje);
             detalle_personaje = createCharacterHtml(personaje);
-            episodios = personaje.episode
-            console.log(episodios)
             container.innerHTML = detalle_personaje;
         });
 

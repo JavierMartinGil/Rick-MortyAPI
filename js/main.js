@@ -68,13 +68,5 @@ function createCharacterHtml(character) {
 }
 
 
-// Función para recuperar a los personajes por id
-function getSingle(pId) {
-    fetch(`${baseUrl}${pId}`)
-        .then(response => response.json())
-        .then(character => console.log(character));
-}
-
-
 
 
