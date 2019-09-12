@@ -6,24 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Rick and Morty API</title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
-        <div class="container-form">
-            <select id="status">
-                <option value="" selected>Selecciona una opción</option>
-                <option value="dead">Muerto</option>
-                <option value="alive">Vivo</option>
-                <option value="unknown">Desconocido</option>
-            </select>
-            <input type="text" id="buscar" placeholder="Buscar personaje">
+        <div class="contenido">
+            <div class="header in-grid">
+                <h1>Rick & Morty API</h1>
+            </div>
+            <div class="in-grid">
+                <div class="forms">
+                    <select id="status">
+                        <option value="" selected>Selecciona una opción</option>
+                        <option value="dead">Muerto</option>
+                        <option value="alive">Vivo</option>
+                        <option value="unknown">Desconocido</option>
+                    </select>
+                    <input type="text" id="buscar" placeholder="Buscar personaje">
+                </div>
+            </div>
+
+            <div class="container">
+
+            </div>
         </div>
-
-        <div class="container">
-
-        </div>
-
         <script src="js/main.js"></script>
         <script>getAll()</script>
     </body>

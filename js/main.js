@@ -60,18 +60,12 @@ function getAll() {
 function createCharacterHtml(character) {
     return `<div class="personaje">
                     <img src="${character.image}" alt="">
-                    <h2>${character.name}</h2>
-                    <h4>Status: ${character.status}</h4>
+                    <h2><i class="fa fa-user"></i> ${character.name}</h2>
+                    <h4><i class="fa fa-heart"></i> Status: ${character.status}</h4>
+                    <h4><i class="fa fa-bug"></i> Especie: ${character.species}</h4>
                     <a href="singlecharacter.html?id=${character.id}" class="btn">Mas info</a>
                 </div>`;
 }
-
-
-/* // recuperar parametros de la url
-function obtenerParam() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const paramId = urlParams.get('id');
-} */
 
 
 // Función para recuperar a los personajes por id

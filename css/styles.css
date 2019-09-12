@@ -6,7 +6,26 @@
     box-sizing: border-box;
 }
 
-.container-form{
+body{
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left top;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido{
+    background-color: #2195f3b2;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+
+.in-grid{
     max-width: 1100px;
     padding: 10px;
     margin: 0 auto;
@@ -21,12 +40,45 @@
     margin: 0 auto;    
 }
 
+div.forms{
+    display: flex;
+}
+
+select#status, input#buscar {
+    width: 50%;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 4px solid #1C3144;
+    margin: 0 5px;
+}
+
 .personaje {
     width: 24%;
     margin: 20px 5px;   
     background-color: #eeeeee;
     border-radius: 10px;
     min-width: 250px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+    min-height: 450px;
+}
+
+.personaje:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.personaje h2, .personaje h4{
+    margin: 10px;
+    padding-bottom: 5px;
+}
+
+.personaje h2{
+    border-bottom: 1px solid #1C3144;
+}
+
+i.fa {
+    color: #2196f3;
 }
 
 a.btn {
@@ -42,7 +94,9 @@ a.btn {
     border-radius: 20px;
     margin: 0 auto;
     transition: .5s;
-    margin-bottom: 10px
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
 }
 
 a.btn:hover{
@@ -54,5 +108,40 @@ a.btn:hover{
     border-top-right-radius: 10px;
     width: 100%;
 }
+
+.detalle_personaje {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width: 100%;
+}
+
+.detalle h1 {
+    font-size: 3em;
+    color: white;
+}
+
+.detalle_personaje div{
+    margin: 0 15px;
+}
+
+.detalle_personaje .avatar {
+    margin: 0;
+    margin-bottom: -4px;
+}
+
+.detalle_personaje h2 {
+    border-bottom: 1px solid #1C3144;
+    padding-bottom: 10px;
+}
+
+.detalle_personaje .avatar img{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
 
 
