@@ -29,7 +29,6 @@ buscar.addEventListener('input', (event) => {
 
 
 selector.addEventListener('change', (event) => {
-    console.log(event.target.value);
     fetch(`${baseUrl}?status=${event.target.value}`)
 
         .then(response => response.json())
