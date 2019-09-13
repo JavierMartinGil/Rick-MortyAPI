@@ -37,6 +37,11 @@ body{
     margin: 0 auto;    
 }
 
+.paginacion.in-grid {
+    text-align: center;
+    margin-top: 15px;
+}
+
 div.forms{
     display: flex;
 }
@@ -47,6 +52,35 @@ select#status, input#buscar {
     padding: 10px;
     border: 4px solid #1C3144;
     margin: 0 5px;
+}
+
+.paginacion{
+    display: flex;
+    justify-content: center;
+}
+
+.paginacion button{
+    width: 200px;
+    padding: 10px;
+    background-color: #1C3144;
+    margin: 0 5px;
+    color: white;
+    border: none;
+    display: block;
+}
+
+.paginacion button:hover{
+    cursor: pointer;
+    background-color: #0e6ab6;
+}
+
+button[disabled] {
+    background-color: #afafaf;
+}
+
+button[disabled]:hover{
+    cursor: not-allowed;
+    background-color: #afafaf;
 }
 
 .personaje {
@@ -72,6 +106,7 @@ select#status, input#buscar {
 
 .personaje h2{
     border-bottom: 1px solid #1C3144;
+    font-size: 1.2em;
 }
 
 i.fa {

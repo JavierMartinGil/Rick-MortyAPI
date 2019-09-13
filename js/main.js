@@ -3,10 +3,13 @@ const baseUrl = 'https://rickandmortyapi.com/api/character/';
 const container = document.querySelector('.container');
 const selector = document.getElementById('status');
 const buscar = document.getElementById('buscar');
+const anterior = document.getElementById('anterior');
+const siguiente = document.getElementById('siguiente');
 let resultado = '';
 let resultado_pet = '';
 let personajes = '';
-
+let contador = 1;
+anterior.disabled = true;
 
 buscar.addEventListener('input', (event) => {
     fetch(`${baseUrl}`)
@@ -42,9 +45,12 @@ selector.addEventListener('change', (event) => {
 
 })
 
+siguiente.addEventListener('click', siguientePag);
+anterior.addEventListener('click', anteriorPag);
+
 // Función para recuperar a todos los personajes
 function getAll() {
-    fetch(baseUrl)
+    fetch(`${baseUrl}?page=${contador}`)
         .then(response => response.json())
         .then(characters => {
             let personajes = characters.results;
@@ -53,7 +59,6 @@ function getAll() {
                 resultado += createCharacterHtml(personaje);
             }
             container.innerHTML = resultado;
-
         });
 }
 
@@ -65,6 +70,29 @@ function createCharacterHtml(character) {
                     <h4><i class="fa fa-bug"></i> Especie: ${character.species}</h4>
                     <a href="singlecharacter.html?id=${character.id}" class="btn">Mas info</a>
                 </div>`;
+}
+
+function siguientePag() {
+
+    if (contador > 20) {
+        contador = 20;
+    }
+    anterior.disabled = false;
+    contador++;
+    resultado = '';
+    getAll();
+}
+
+function anteriorPag() {
+
+    if (contador <= 1) {
+        anterior.disabled = true;
+    } else {
+        contador--;
+        anterior.disabled = false;
+    }
+    resultado = '';
+    getAll();
 }
 
 
