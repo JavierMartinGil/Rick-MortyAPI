@@ -34,6 +34,7 @@ function createCharacterHtml(character) {
                 <h3><i class="fa fa-heart"></i> Status: ${character.status}</h3>
                 <h4><i class="fa fa-bug"></i> Especie: ${character.species}</h4>
                 <h4><i class="fa fa-venus-mars"></i> Género: ${character.gender}</h4>
+                <h4><i class="fa fa fa-map-marker"></i> Localización: ${character.location.name}</h4>
                 <a href="index.html" class="btn_volver">Volver al inicio</a>
             </div>
             <div class="episodios">
