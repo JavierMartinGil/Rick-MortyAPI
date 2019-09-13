@@ -12,7 +12,7 @@ let contador = 1;
 anterior.disabled = true;
 
 buscar.addEventListener('input', (event) => {
-    fetch(`${baseUrl}`)
+    fetch(`${baseUrl}?page=${contador}`)
         .then(response => response.json())
         .then(characters => personajes = characters.results)
         .then(personajes => {
