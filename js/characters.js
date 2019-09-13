@@ -18,12 +18,14 @@ function obtenerParam() {
 }
 
 function createCharacterHtml(character) {
+    console.log(character)
     let episodiosHtml = "";
     for (let episodio of character.episode) {
         episodiosHtml += `<li><a href="${episodio}">Episodio número: ${episodio.substring(40, episodio.length)}</li>`;
     }
     return `<div class="in-grid detalle"><h1>${character.name}</h1></div>
             <div class="detalle_personaje">
+            
             <div class="avatar">
                 <img src="${character.image}">                
             </div>
